@@ -1,0 +1,17 @@
+<template name="featureItem">
+  <div class="panel panel-default">
+    <div class="panel-heading"> {{name}} </div>
+    <div class="panel-body">
+      <p> {{description}} </p>
+    </div>
+    <table class="table">
+      <th>
+        <td>#</td>
+        <td>User Story</td>
+      </th>
+      {{#each userStories}}
+        {{> storyItem}}
+      {{/each}}
+    </table>
+  </div>
+</template>

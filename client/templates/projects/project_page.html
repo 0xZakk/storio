@@ -1,0 +1,10 @@
+<template name="projectPage">
+  <h3> {{name}} </h3>
+  <p> {{description}} </p>
+  <ul>
+    {{#each features}}
+      {{> featureItem}}
+    {{/each}}
+  </ul>
+
+</template>
