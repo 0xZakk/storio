@@ -1,10 +1,24 @@
 <template name="projectPage">
-  <h3> {{name}} </h3>
+  <div class="heading">
+    <h3> {{title}} </h3>
+    <div class="btn-group project-edit-btns">
+      <a href="" class="btn btn-default btn-xs glyphicon glyphicon-plus"></a>
+      <a href=" {{pathFor 'projectEdit'}}" class="btn btn-default btn-xs glyphicon glyphicon-pencil"></a>
+      <a href="#" class="btn btn-default btn-xs glyphicon glyphicon-remove" id="remove-project"></a>      
+    </div>
+  </div>
+  
+  <br>
   <p> {{description}} </p>
-  <ul>
+
+  <div name="feature-container">
+    {{#if newFeature}}
+      {{> featureSubmit}}
+    {{/if}}
+
     {{#each features}}
       {{> featureItem}}
     {{/each}}
-  </ul>
+  </div>
 
 </template>

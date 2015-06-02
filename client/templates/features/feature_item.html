@@ -1,0 +1,36 @@
+<template name="featureItem">
+   
+<div class="panel panel-default">
+
+  <div class="panel-heading clearfix">
+    <h3 class="panel-title">
+      {{title}}
+      <div class="btn-group feature-edit-btns pull-right">
+        <a href="#" class="btn btn-default btn-xs glyphicon glyphicon-plus"></a>
+        <a href="#" class="btn btn-default btn-xs glyphicon glyphicon-pencil"></a>
+        <a href="#" class="btn btn-default btn-xs glyphicon glyphicon-remove" ></a> 
+      </div>
+    </h3>
+  </div>
+
+  <div class="panel-body">
+    <strong>Description: </strong>
+    <p> {{description}} </p>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>
+          User Stories:
+        </th>
+      </tr>        
+    </thead>
+    <tbody>
+      {{#each userStories}}
+        {{> storyItem}}
+      {{/each}}        
+    </tbody>
+  </table>
+</div>
+  
+</template>

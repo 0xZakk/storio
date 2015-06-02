@@ -3,3 +3,9 @@ Template.projectsList.helpers({
     return Projects.find();
   }
 });
+
+Template.projectsList.events({
+  'click .glyphicon-plus': function () {
+    Router.go('projectSubmit');
+  }
+});

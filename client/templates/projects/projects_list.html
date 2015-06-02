@@ -1,6 +1,12 @@
 <template name="projectsList">
   <div class="projects">
-    <h1>Projects</h1>
+    <h1>
+      Projects
+      <button type="button" class="btn btn-default btn-sm" aria-label="Left Align">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button>
+    </h1>
+    
     {{#each projects}}
       {{> projectItem}}
     {{/each}}
