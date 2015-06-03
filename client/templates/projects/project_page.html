@@ -11,13 +11,17 @@
   <br>
   <p> {{description}} </p>
 
-  <div name="feature-container">
+  <div name="feature-container" id="feature-container">
     {{#if newFeature}}
       {{> featureSubmit}}
     {{/if}}
 
     {{#each features}}
-      {{> featureItem}}
+      {{#if editable}}
+        {{> featureEdit}}
+      {{else}}
+        {{> featureItem}}
+      {{/if}}
     {{/each}}
   </div>
 

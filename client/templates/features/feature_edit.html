@@ -1,0 +1,27 @@
+<template name="featureEdit">
+
+<div class="panel panel-default">
+
+  <div class="panel-heading clearfix">
+    <h3 class="panel-title">
+      <input name="title" id="title" type="text" value="{{title}}" placeholder="New title" class="form-control" />
+    </h3>
+  </div>
+
+  <div class="panel-body">
+    <strong>Description: </strong>
+    <input name="description" id="description" type="textarea" value="{{description}}" placeholder="New description" class="form-control" />
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>
+          User Stories:
+          <a href="#" class="btn btn-default btn-xs feature-edit glyphicon glyphicon-floppy-disk pull-right"></a>
+        </th>
+      </tr>        
+    </thead>
+  </table>
+</div>
+
+</template>

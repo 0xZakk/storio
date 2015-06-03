@@ -8,10 +8,10 @@ Template.projectPage.events({
       Router.go('projectsList');
     }
   },
-  'click .glyphicon-pencil': function () {
+  'click .project-edit-btns .glyphicon-pencil': function () {
     Router.go('projectEdit');
   },
-  'click .glyphicon-plus': function () {
+  'click .project-edit-btns .glyphicon-plus': function () {
     return Session.set('newFeature', true);
   }
 });
