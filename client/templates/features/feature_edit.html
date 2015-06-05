@@ -17,10 +17,17 @@
       <tr>
         <th>
           User Stories:
-          <a href="#" class="btn btn-default btn-xs feature-edit glyphicon glyphicon-floppy-disk pull-right"></a>
+          <div class="btn-group feature-edit-btns pull-right">
+            <a href="#" class="btn btn-default btn-xs glyphicon glyphicon-floppy-disk"></a>
+          </div>
         </th>
       </tr>        
     </thead>
+    <tbody>
+      {{#each userStories}}
+        {{> storyEdit}}
+      {{/each}}
+    </tbody>
   </table>
 </div>
 

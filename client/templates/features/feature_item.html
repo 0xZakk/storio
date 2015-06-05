@@ -21,14 +21,27 @@
     <thead>
       <tr>
         <th>
-          User Stories:
+          {{#if userStories}}
+            User Stories:
+            {{#if initiated}}
+              <div class="btn-group story-new-btns pull-right">
+                <a href="#" class="btn btn-default btn-xs glyphicon glyphicon-ok" ></a> 
+              </div>
+            {{/if}}
+          {{else}}
+            <em>Add some User Stories</em>
+          {{/if}}
         </th>
       </tr>        
     </thead>
     <tbody>
       {{#each userStories}}
         {{> storyItem}}
-      {{/each}}        
+      {{/each}}
+
+      {{#if initiated}}
+        {{> storySubmit}}
+      {{/if}}
     </tbody>
   </table>
 </div>

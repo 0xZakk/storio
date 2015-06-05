@@ -4,8 +4,6 @@ Template.storyItem.helpers({
 
     if (status) {
       return "success";
-    } else{
-      return "danger";
     }
   }
 });

@@ -19,10 +19,7 @@ Template.projectPage.events({
 Template.projectPage.helpers({
   newFeature: function () {
     return Session.get('newFeature', false);
-  }
-});
-
-Template.projectPage.helpers({
+  },
   features: function () {
     return Features.find({projectId: this._id});
   }

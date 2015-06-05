@@ -1,5 +1,5 @@
 Template.featureEdit.events({
-  'click .glyphicon-floppy-disk': function (e, template) {
+  'click .feature-edit-btns .glyphicon-floppy-disk': function (e, template) {
     e.preventDefault();
 
     var featureId = this._id;
@@ -10,5 +10,11 @@ Template.featureEdit.events({
       if (error) { return throwError(error.reason); }
       Features.update(featureId, {$set: {editable: false}});
     });
+  }
+});
+
+Template.featureEdit.helpers({
+  userStories: function () {
+    return Stories.find({featureId: this._id});
   }
 });

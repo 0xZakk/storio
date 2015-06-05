@@ -1,0 +1,18 @@
+<template name="storySubmit">
+  <tr  class="{{errorClass}}">
+    <td>
+      <span class="{{errorClass 'role'}}">
+        As <input name="role" id="role" type="text" value="" placeholder="Role" />,
+      </span>
+      <span class="{{errorClass 'action'}}">
+        I <input name="action" id="action" type="text" value="" placeholder="Action" />,
+      </span>
+      <span class="{{errorClass 'benefit'}}">
+        so that <input name="benefit" id="benefit" type="text" value="" placeholder="Benefit" />.
+      </span>
+      <span class="btn-group story-new-btns pull-right">
+        <a href="#" class="btn btn-default btn-xs glyphicon glyphicon-floppy-disk"></a>
+      </span>
+    </td>
+  </tr>
+</template>

@@ -17,6 +17,20 @@ Template.featureItem.events({
   },
   'click .feature-edit-btns .glyphicon-plus': function (e) {
     e.preventDefault();
+
+    var featureId = this._id;
+    Features.update(featureId, {$set: {initiated: true}});
+  },
+  'click .story-new-btns .glyphicon-ok': function (e) {
+    e.preventDefault();
     
+    var featureId = this._id;
+    Features.update(featureId, {$set: {initiated: false}});
+  }
+});
+
+Template.featureItem.helpers({
+  userStories: function () {
+    return Stories.find({featureId: this._id});
   }
 });

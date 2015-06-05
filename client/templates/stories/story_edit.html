@@ -1,0 +1,49 @@
+<template name="storyEdit">
+  {{#if editable}}
+    {{> storyEditActive}}
+  {{else}}
+    {{> storyEditDeactive}}
+  {{/if}}  
+</template>
+
+<template name="storyEditActive">
+  <tr class="{{status}}">
+    <td>
+      As <input name="role" id="role" type="text" value=" {{role}} " placeholder="Role" />,
+      I <input name="action" id="action" type="text" value=" {{action}} " placeholder="Action" />,
+      so that <input name="benefit" id="benefit" type="text" value=" {{benefit}} " placeholder="Benefit" />.
+
+      <div class="btn-group story-edit-btns pull-right">
+        <a href="#" class="btn btn-default btn-xs glyphicon glyphicon-floppy-disk"></a>
+        {{#if completed}}
+        <a href="#" class="btn btn-default btn-xs glyphicon glyphicon-wrench"></a>
+        {{else}}
+        <a href="#" class="btn btn-default btn-xs glyphicon glyphicon-ok"></a>
+        {{/if}}
+        <a href="#" class="btn btn-default btn-xs glyphicon glyphicon-remove"></a>
+      </div>  
+    </td>
+  </tr>
+</template>
+
+<template name="storyEditDeactive">
+  <tr class="{{status}}">
+    <td>
+      As {{role}}
+      I {{action}}
+      so that {{benefit}}.
+
+      <div class="btn-group story-edit-btns pull-right">
+        <a href="#" class="btn btn-default btn-xs glyphicon glyphicon-pencil"></a>
+        {{#if completed}}
+        <a href="#" class="btn btn-default btn-xs glyphicon glyphicon-wrench"></a>
+        {{else}}
+        <a href="#" class="btn btn-default btn-xs glyphicon glyphicon-ok"></a>
+        {{/if}}
+        <a href="#" class="btn btn-default btn-xs glyphicon glyphicon-remove"></a>
+      </div>  
+
+    </td>
+  </tr>
+</template>
+
